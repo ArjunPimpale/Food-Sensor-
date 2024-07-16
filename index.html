@@ -1,73 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-     <style>
-        .container{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .container.h1{
-            margin:10px;
-        }
-     </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .container {
+        background-image: linear-gradient(45deg,rgba(245, 70, 66, 0.75),rgba(8, 83, 156, 0.75)), url('download.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px 0px 0px 0px ;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+    </style>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <title>Sensors Feedback</title>
   </head>
   <body>
-    <div class="container">
-
+      <div class="container">
         <h1>Sensors</h1>
         <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>PH sensor</td>
-                <td id = "phsensor">Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Color Sensor</td>
-                <td id ="colorsensor">Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>@twitter</td>
-                <td colspan="2" id = "turbidity">Turbidity</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>@twitter</td>
-                <td colspan="2" id = "methane">methane</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>@twitter</td>
-                <td colspan="2" id ="alcohol">Alcohol</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Sensor Name</th>
+              <th scope="col">Sensor Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>PH sensor</td>
+              <td id="phsensor">Ph Sensor Value not found</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Color Sensor</td>
+              <td id="colorsensor">color sensor value not found</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Turbidity</td>
+              <td colspan="2" id="turbidity">Turbidity value not found</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>methane</td>
+              <td colspan="2" id="methane">methane value not found</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Alcohol</td>
+              <td colspan="2" id="alcohol">Alcohol value not found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
