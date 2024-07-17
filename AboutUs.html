@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .frame {
+            background-color: #c5c5c5;
+            margin: 10px;
+            width: 270px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s, filter 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+        }
+        .frame:hover {
+            border: 2px solid black;
+        }
+        .frame:hover .profile-pic {
+            transform: scale(1.05);
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #555;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .blur {
+            filter: blur(4px);
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: black;
+            font-size: 40px;
+        }
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: black;
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 60px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h2>About us</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, in eum...</p>
+    <h2>Our Team</h2>
+    <div class="container">
+        <div class="frame" id="member1">
+            <div class="profile-pic"></div>
+            <h3>Member 1</h3>
+        </div>
+        <div class="frame" id="member2">
+            <div class="profile-pic"></div>
+            <h3>Member 2</h3>
+        </div>
+        <div class="frame" id="member3">
+            <div class="profile-pic"></div>
+            <h3>Member 3</h3>
+        </div>
+        <div class="frame" id="member4">
+            <div class="profile-pic"></div>
+            <h3>Member 4</h3>
+        </div>
+        <div class="frame" id="member5">
+            <div class="profile-pic"></div>
+            <h3>Member 5</h3>
+        </div>
+        <div class="frame" id="member6">
+            <div class="profile-pic"></div>
+            <h3>Member 6</h3>
+        </div>
+        <div class="frame" id="member7">
+            <div class="profile-pic"></div>
+            <h3>Member 7</h3>
+        </div>
+        <div class="frame" id="member8">
+            <div class="profile-pic"></div>
+            <h3>Member 8</h3>
+        </div>
+        <div class="frame" id="member9">
+            <div class="profile-pic"></div>
+            <h3>Member 9</h3>
+        </div>
+        <div class="frame" id="member10">
+            <div class="profile-pic"></div>
+            <h3>Member 10</h3>
+        </div>
+        <div class="frame" id="member11">
+            <div class="profile-pic"></div>
+            <h3>Member 11</h3>
+        </div>
+        <div class="frame" id="member12">
+            <div class="profile-pic"></div>
+            <h3>Member 12</h3>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const members = [
+                { name: "Siddarth" },
+                { name: "Lekh" },
+                { name: "Arjun" },
+                { name: "Aishwarya" },
+                { name: "Adveat" },
+                { name: "Rohan" },
+                { name: "Riya" },
+                { name: "Kriya" },
+                { name: "Jeet" },
+                { name: "Devansh" },
+                { name: "Suyog" },
+                { name: "Sahil" }
+            ];
+
+            members.forEach((member, index) => {
+                const frame = document.getElementById(`member${index + 1}`);
+                if (frame) {
+                    frame.querySelector("h3").innerText = member.name;
+                }
+            });
+
+            const frames = document.querySelectorAll('.frame');
+
+            frames.forEach(frame => {
+                frame.addEventListener('mouseenter', () => {
+                    frames.forEach(otherFrame => {
+                        if (otherFrame !== frame) {
+                            otherFrame.classList.add('blur');
+                        }
+                    });
+                });
+
+                frame.addEventListener('mouseleave', () => {
+                    frames.forEach(otherFrame => {
+                        otherFrame.classList.remove('blur');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
