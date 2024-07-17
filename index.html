@@ -4,35 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
-      body {
-        width: 100vw;
-        height: 100vh;
-      }
-      
-      .container {
-  position: relative;
-  width:100vw;
-  height:100vh;
-  z-index: 1; /* Ensure content is above the background */
-}
+    <link rel="stylesheet" href="style.css">
 
-.container::before {
-  content: "";
-  background: url('download.jpg') no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.5; /* Adjust this value to change the opacity */
-  z-index: -1; /* Ensure background is behind the content */
-}
-      
+    <style>
+     
     </style>
     <!-- Bootstrap CSS -->
     <link
@@ -45,45 +20,45 @@
     <title>Sensors Feedback</title>
   </head>
   <body>
-      <div class="container">
-        <h1>Sensors</h1>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">No.</th>
-              <th scope="col">Sensor Name</th>
-              <th scope="col">Sensor Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>PH sensor</td>
-              <td id="phsensor">Ph Sensor Value not found</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Color Sensor</td>
-              <td id="colorsensor">color sensor value not found</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Turbidity</td>
-              <td colspan="2" id="turbidity">Turbidity value not found</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>methane</td>
-              <td colspan="2" id="methane">methane value not found</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>Alcohol</td>
-              <td colspan="2" id="alcohol">Alcohol value not found</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="container">
+      <h1>Sensors</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Sensor Name</th>
+            <th scope="col">Sensor Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>PH sensor</td>
+            <td id="phsensor">Ph Sensor Value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Color Sensor</td>
+            <td id="colorsensor">color sensor value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Turbidity</td>
+            <td colspan="2" id="turbidity">Turbidity value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>methane</td>
+            <td colspan="2" id="methane">methane value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Alcohol</td>
+            <td colspan="2" id="alcohol">Alcohol value not found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
