@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error fetching data:", error);
       }
     }
+
   
     // Fetch data every 15 seconds
     setInterval(fetchSensorData, 1000);
@@ -34,3 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial call to fetch data immediately when the page loads
     fetchSensorData();
   });
+
