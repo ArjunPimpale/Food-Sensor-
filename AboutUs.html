@@ -34,6 +34,7 @@
             flex-direction: column;
             align-items: center;
             color: black;
+            font-size: 50px;
         }
         .frame:hover {
             border: 2px solid black;
@@ -73,6 +74,22 @@
             padding-right: 30px;
             margin-bottom: 60px;
             margin-top: 25px;
+        }
+        .Lekh {
+            background-image: url(/images/Lekh.jpg);
+            background-size: cover;
+        }    
+        .Kriya {
+            background-image: url(/images/Kriya.jpg);
+            background-size: cover;
+        }
+        .Rohan {
+            background-image: url(/images/Rohan.jpg);
+            background-size: cover;
+        }
+        .Devansh {
+            background-image: url(/images/Devansh.jpg);
+            background-size: cover;
         }
     </style>
 </head>
@@ -118,52 +135,52 @@
     <h2>Our Team</h2>
     <div class="container">
         <div class="frame" id="member1">
-            <div class="profile-pic"></div>
-            <h3>Member 1</h3>
+            <div class="profile-pic Siddarth"></div>
+            <h4>Member 1</h4>
         </div>
         <div class="frame" id="member2">
-            <div class="profile-pic"></div>
-            <h3>Member 2</h3>
+            <div class="profile-pic Lekh"></div>
+            <h4>Member 2</h4>
         </div>
         <div class="frame" id="member3">
-            <div class="profile-pic"></div>
-            <h3>Member 3</h3>
+            <div class="profile-pic Arjun"></div>
+            <h4>Member 3</h4>
         </div>
         <div class="frame" id="member4">
-            <div class="profile-pic"></div>
-            <h3>Member 4</h3>
+            <div class="profile-pic Aishwarya"></div>
+            <h4>Member 4</h4>
         </div>
         <div class="frame" id="member5">
-            <div class="profile-pic"></div>
-            <h3>Member 5</h3>
+            <div class="profile-pic Adveat"></div>
+            <h4>Member 5</h4>
         </div>
         <div class="frame" id="member6">
-            <div class="profile-pic"></div>
-            <h3>Member 6</h3>
+            <div class="profile-pic Rohan"></div>
+            <h4>Member 6</h4>
         </div>
         <div class="frame" id="member7">
-            <div class="profile-pic"></div>
-            <h3>Member 7</h3>
+            <div class="profile-pic Riya"></div>
+            <h4>Member 7</h4>
         </div>
         <div class="frame" id="member8">
-            <div class="profile-pic"></div>
-            <h3>Member 8</h3>
+            <div class="profile-pic Kriya"></div>
+            <h4>Member 8</h4>
         </div>
         <div class="frame" id="member9">
-            <div class="profile-pic"></div>
-            <h3>Member 9</h3>
+            <div class="profile-pic Jeet"></div>
+            <h4>Member 9</h4>
         </div>
         <div class="frame" id="member10">
-            <div class="profile-pic"></div>
-            <h3>Member 10</h3>
+            <div class="profile-pic Devansh"></div>
+            <h4>Member 10</h4>
         </div>
         <div class="frame" id="member11">
-            <div class="profile-pic"></div>
-            <h3>Member 11</h3>
+            <div class="profile-pic Suyog"></div>
+            <h4>Member 11</h4>
         </div>
         <div class="frame" id="member12">
-            <div class="profile-pic"></div>
-            <h3>Member 12</h3>
+            <div class="profile-pic Sahil"></div>
+            <h4>Member 12</h4>
         </div>
     </div>
     <script>
@@ -186,7 +203,7 @@
             members.forEach((member, index) => {
                 const frame = document.getElementById(`member${index + 1}`);
                 if (frame) {
-                    frame.querySelector("h3").innerText = member.name;
+                    frame.querySelector("h4").innerText = member.name;
                 }
             });
 
