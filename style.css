@@ -33,7 +33,7 @@
     opacity: 0.1; /* Adjust this value to change the opacity */
     z-index: -1; /* Ensure background is behind the content */
   }
-  .outputarea{
+  /* .outputarea{
     display:flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -93,4 +93,4 @@
     height:75px;
     width:75px;
   }
-   
+    */
