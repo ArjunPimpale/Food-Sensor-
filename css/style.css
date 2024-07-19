@@ -11,6 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size:auto;
     background-position: center;
+    overflow-y: hidden;
     height: 100vh;
     width: 100vw;
     
@@ -23,7 +24,7 @@ body{
     height: 100% !important;
     max-width: 100% !important;
     background-color: rgba(0, 0,0, 0.5) !important;
-    /* overflow-y: scroll !important; */
+    overflow-y: scroll !important;
 }
 
 
