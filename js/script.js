@@ -5,24 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Function to fetch sensor data from ThingSpeak API
     async function fetchSensorData() {
-      const url = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&results=1`;
-  
+      const read = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&results=1`;
+      const write = `https://api.thingspeak.com/update?api_key=61LHP61JLXWUTXVC&field1=0 `
+
       try {
-        const response = await fetch(url);
+        const response = await fetch(read);
+        
         const data = await response.json();
         let phsensor = data.feeds[0].field1;
         let color = data.feeds[0].field2;
         let turb = data.feeds[0].field3;
         let methane = data.feeds[0].field4;
         let alcohol = data.feeds[0].field5;
-  
+        
         document.querySelector("#turbidity").innerHTML = `${turb}`;
         document.querySelector("#phsensor").innerHTML = `${phsensor}`;
         document.querySelector("#colorsensor").innerHTML = `${color}`;
         document.querySelector("#methane").innerHTML = `${methane}`;
         document.querySelector("#alcohol").innerHTML = `${alcohol}`;
-  
-        console.log(data.feeds[0]);
+        
+       
+        const response2 = await fetch(write);
+        const wrdata = await response2.json();
+        console.log(wrdata)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
