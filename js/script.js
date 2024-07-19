@@ -1,10 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+const button = document.querySelector(".left").getElementsByTagName("button")[0];
+button.addEventListener('click', () => {
     // Replace with your actual ThingSpeak Channel ID and Read API Key
     const channelId = '2599999';
     const apiKey = 'SX2MQRH2IHLWECII';
   
     // Function to fetch sensor data from ThingSpeak API
     async function fetchSensorData() {
+      nosleep()
       const read = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&results=1`;
       const write = `https://api.thingspeak.com/update?api_key=61LHP61JLXWUTXVC&field1=0 `
 
@@ -40,4 +42,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial call to fetch data immediately when the page loads
     fetchSensorData();
   });
+
+  // Replace 'YOUR_WRITE_API_KEY' with your actual write API key
+const apiKey = '61LHP61JLXWUTXVC';
+
+// Replace these with the values you want to write to the channel
+const field7Value = 1; // Example value for field1
+const field8Value = 16; // Example value for field2
+
+
+
+function nosleep(){
+  
+  const url = 'https://api.thingspeak.com/update.json';
+  
+  const data = {
+    api_key: apiKey,
+    field7: field7Value,
+    field8: field8Value
+  };
+  
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+
 
