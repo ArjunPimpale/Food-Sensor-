@@ -37,7 +37,7 @@ button.addEventListener('click', () => {
 
   
     // Fetch data every 15 seconds
-    setInterval(fetchSensorData, 1000);
+    setInterval(fetchSensorData, 5000);
   
     // Initial call to fetch data immediately when the page loads
     fetchSensorData();
