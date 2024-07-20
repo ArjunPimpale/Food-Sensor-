@@ -1,8 +1,8 @@
 const button = document.querySelector(".left").getElementsByTagName("button")[0];
 button.addEventListener('click', () => {
     // Replace with your actual ThingSpeak Channel ID and Read API Key
-    const channelId = '2599999';
-    const apiKey = 'SX2MQRH2IHLWECII';
+    const channelId = '2602469';
+    const apiKey = '61LHP61JLXWUTXVC';
   
     // Function to fetch sensor data from ThingSpeak API
     async function fetchSensorData() {
