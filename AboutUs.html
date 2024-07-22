@@ -16,6 +16,13 @@
             font-family: Arial, sans-serif;
             background-color: #ffffff;
             color: #fff;
+            padding-top: 70px;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
         .container {
             display: flex;
@@ -40,7 +47,7 @@
             border: 2px solid black;
         }
         .frame:hover .profile-pic {
-            transform: scale(1.05);
+            transform: scale(1.005);
         }
         .profile-pic {
             width: 200px;
@@ -91,12 +98,25 @@
             background-image: url(images/Devansh.jpg);
             background-size: cover;
         }
+        .group-frame {
+            width: 88%;
+            height: 560px;
+        }
+        .group-pic {
+            width: 99%;
+            height: 500px;
+            border-radius: 12px;
+            background-color: #555;
+            background-image: url(images/group.jpg);
+            background-size: cover;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Food Tester</a>
+          <a class="navbar-brand" href="AboutUs.html">Food Tester</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -118,9 +138,6 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
               </li>
             </ul>
             <!-- <form class="d-flex">
@@ -181,6 +198,10 @@
         <div class="frame" id="member12">
             <div class="profile-pic Sahil"></div>
             <h4>Member 12</h4>
+        </div>
+        <div class="frame group-frame" id="group">
+            <div class="profile-pic group-pic"></div>
+            <h4>Our Team</h4>
         </div>
     </div>
     <script>
