@@ -1,12 +1,13 @@
 const button = document.querySelector(".left").getElementsByTagName("button")[0];
-button.addEventListener('click', () => {
+const left = document.querySelector(".left")
+
     // Replace with your actual ThingSpeak Channel ID and Read API Key
-    const channelId = '2602469';
-    const apiKey = '61LHP61JLXWUTXVC';
+    const channelId = '2599999';
+    const apiKey = 'SX2MQRH2IHLWECII';
   
     // Function to fetch sensor data from ThingSpeak API
     async function fetchSensorData() {
-      nosleep()
+     
       const read = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&results=1`;
       const write = `https://api.thingspeak.com/update?api_key=61LHP61JLXWUTXVC&field1=0 `
 
@@ -27,9 +28,7 @@ button.addEventListener('click', () => {
         document.querySelector("#alcohol").innerHTML = `${alcohol}`;
         
        
-        const response2 = await fetch(write);
-        const wrdata = await response2.json();
-        console.log(wrdata)
+     
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -37,18 +36,19 @@ button.addEventListener('click', () => {
 
   
     // Fetch data every 15 seconds
-    setInterval(fetchSensorData, 5000);
+    setInterval(fetchSensorData, 1000);
   
     // Initial call to fetch data immediately when the page loads
     fetchSensorData();
-  });
+  
 
   // Replace 'YOUR_WRITE_API_KEY' with your actual write API key
-const apiKey = '61LHP61JLXWUTXVC';
 
 // Replace these with the values you want to write to the channel
 const field7Value = 1; // Example value for field1
 const field8Value = 16; // Example value for field2
+
+
 
 
 
@@ -77,5 +77,3 @@ function nosleep(){
     console.error('Error:', error);
   });
 }
-
-

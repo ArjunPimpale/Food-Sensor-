@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .frame {
+            background-color: #c5c5c5;
+            margin: 10px;
+            width: 270px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s, filter 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            font-size: 50px;
+        }
+        .frame:hover {
+            border: 2px solid black;
+        }
+        .frame:hover .profile-pic {
+            transform: scale(1.05);
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #555;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .blur {
+            filter: blur(4px);
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: black;
+            font-size: 40px;
+        }
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: black;
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 60px;
+            margin-top: 25px;
+        }
+        .Lekh {
+            background-image: url(images/Lekh.jpg);
+            background-size: cover;
+        }    
+        .Kriya {
+            background-image: url(images/Kriya.jpg);
+            background-size: cover;
+        }
+        .Rohan {
+            background-image: url(images/Rohan.jpg);
+            background-size: cover;
+        }
+        .Devansh {
+            background-image: url(images/Devansh.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Food Tester</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Downloads
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+    <h2>About us</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, in eum...</p>
+    <h2>Our Team</h2>
+    <div class="container">
+        <div class="frame" id="member1">
+            <div class="profile-pic Siddarth"></div>
+            <h4>Member 1</h4>
+        </div>
+        <div class="frame" id="member2">
+            <div class="profile-pic Lekh"></div>
+            <h4>Member 2</h4>
+        </div>
+        <div class="frame" id="member3">
+            <div class="profile-pic Arjun"></div>
+            <h4>Member 3</h4>
+        </div>
+        <div class="frame" id="member4">
+            <div class="profile-pic Aishwarya"></div>
+            <h4>Member 4</h4>
+        </div>
+        <div class="frame" id="member5">
+            <div class="profile-pic Adveat"></div>
+            <h4>Member 5</h4>
+        </div>
+        <div class="frame" id="member6">
+            <div class="profile-pic Rohan"></div>
+            <h4>Member 6</h4>
+        </div>
+        <div class="frame" id="member7">
+            <div class="profile-pic Riya"></div>
+            <h4>Member 7</h4>
+        </div>
+        <div class="frame" id="member8">
+            <div class="profile-pic Kriya"></div>
+            <h4>Member 8</h4>
+        </div>
+        <div class="frame" id="member9">
+            <div class="profile-pic Jeet"></div>
+            <h4>Member 9</h4>
+        </div>
+        <div class="frame" id="member10">
+            <div class="profile-pic Devansh"></div>
+            <h4>Member 10</h4>
+        </div>
+        <div class="frame" id="member11">
+            <div class="profile-pic Suyog"></div>
+            <h4>Member 11</h4>
+        </div>
+        <div class="frame" id="member12">
+            <div class="profile-pic Sahil"></div>
+            <h4>Member 12</h4>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const members = [
+                { name: "Siddarth" },
+                { name: "Lekh" },
+                { name: "Arjun" },
+                { name: "Aishwarya" },
+                { name: "Adveat" },
+                { name: "Rohan" },
+                { name: "Riya" },
+                { name: "Kriya" },
+                { name: "Jeet" },
+                { name: "Devansh" },
+                { name: "Suyog" },
+                { name: "Sahil" }
+            ];
 
+            members.forEach((member, index) => {
+                const frame = document.getElementById(`member${index + 1}`);
+                if (frame) {
+                    frame.querySelector("h4").innerText = member.name;
+                }
+            });
+
+            const frames = document.querySelectorAll('.frame');
+
+            frames.forEach(frame => {
+                frame.addEventListener('mouseenter', () => {
+                    frames.forEach(otherFrame => {
+                        if (otherFrame !== frame) {
+                            otherFrame.classList.add('blur');
+                        }
+                    });
+                });
+
+                frame.addEventListener('mouseleave', () => {
+                    frames.forEach(otherFrame => {
+                        otherFrame.classList.remove('blur');
+                    });
+                });
+            });
+        });
+    </script>
+     <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"
+   ></script>
+</body>
+</html>

@@ -5,42 +5,82 @@ html{
     height: 100%;
 }
 
-body::before {
-    content: "";
-    position: relative;
+body{
     background-image: url('nationalpark.jpg');
     background-repeat: no-repeat;
+    overflow: hidden;
     background-size: cover;
-  
     height:100%;
-
-
 }
 
 .container {
     padding: 0 !important;
+    position: relative!important;
     margin: 0 !important;
-    height: 100% !important;
+    height: 200vh !important;
     max-width: 100% !important;
     background-color: rgba(0, 0, 0, 0.5) !important;
-   overflow-y: scroll  !important;
+    overflow-y: auto !important;
 }
 
 .up {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.29);
 }
 
 .up h1 {
     color: white !important;
 }
-
+.about{
+    display:flex;
+    flex-direction: column;
+    height: 25%;
+    width: 100%;
+    gap:100px;
+    overflow-x:hidden;
+    overflow-y:auto;
+   
+}
+.aboutsection1{
+    display:flex;
+    height: 50%;
+    width: 100%;
+    padding:20px;
+    gap:20px;
+}
+.aboutsection1 p{
+    width:400px;
+}
+.aboutsection1 img{
+    width:400px;
+    height: 400px;
+    
+   
+}
+.aboutsection2{
+    display:flex;
+    flex-direction: row-reverse;
+    height: 50%;
+    width: 100%;
+    padding:20px;
+    gap:20px;
+}
+.aboutsection2 p{
+    width:400px;
+}
+.aboutsection2 img{
+    width:400px;
+    height: 400px;
+    
+   
+}
 .down {
-    height: 100vh;
+    height: 300%;
     display: flex;
+    flex-direction: column;
     background-color: white;
 }
 
@@ -49,17 +89,7 @@ body::before {
     margin-bottom: 20px;
 }
 
-.left {
-    width: 50%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-}
 
-.right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-}
+
+
+
