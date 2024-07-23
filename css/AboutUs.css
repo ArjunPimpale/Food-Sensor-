@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #fff;
+    overflow: hidden;
+    
+  }
+  .main-container{
+    overflow-y: auto;
+    height: 92vh;
+    scrollbar-width: thin !important;
+    scrollbar-color: #ccc #f1f1f1 !important;
+  }
+  .container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    overflow-y: auto !important;
+  }
+  .frame {
+    background-color: #c5c5c5;
+    margin: 10px;
+    width: 270px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 50px;
+  }
+  .frame:hover {
+    border: 2px solid black;
+  }
+  .frame:hover .profile-pic {
+    transform: scale(1.005);
+  }
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  .blur {
+    filter: blur(4px);
+  }
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 40px;
+  }
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  p {
+    color: black;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 60px;
+    margin-top: 25px;
+  }
+  .Lekh {
+    background-image: url(images/Lekh.jpg);
+    background-size: cover;
+  }
+  .Kriya {
+    background-image: url(images/Kriya.jpg);
+    background-size: cover;
+  }
+  .Rohan {
+    background-image: url(images/Rohan.jpg);
+    background-size: cover;
+  }
+  .Devansh {
+    background-image: url(images/Devansh.jpg);
+    background-size: cover;
+  }
+  .group-frame {
+    width: 88%;
+    height: 560px;
+  }
+  .group-pic {
+    width: 99%;
+    height: 500px;
+    border-radius: 12px;
+    background-color: #555;
+    background-image: url(images/group.jpg);
+    background-size: cover;
+    margin-bottom: 15px;
+  }
+  .main-container::-webkit-scrollbar {
+width: 12px; /* Width of the scrollbar */
+}
+
+.main-container::-webkit-scrollbar-thumb {
+background: #ccc; /* Color of the scroll thumb */
+border-radius: 6px; /* Rounded corners for the scroll thumb */
+border: 3px solid #f1f1f1; /* Border color of the scroll thumb to match the track background */
+}
+
+.main-container::-webkit-scrollbar-thumb:hover {
+background: #aaa; /* Color when hovering over the scroll thumb */
+}
+
+.main-container::-webkit-scrollbar-track {
+background: #f1f1f1; /* Background of the scrollbar track */
+border-radius: 6px; /* Rounded corners for the scroll track */
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the track */
+}
