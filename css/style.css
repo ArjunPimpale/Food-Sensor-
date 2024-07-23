@@ -31,6 +31,10 @@ body {
     scrollbar-color: #787777  rgba(0, 0, 0, 0.5); /* For Firefox */
 }
 
+p {
+    text-align: center;
+}
+
 .up {
     display: flex;
     justify-content: center;
