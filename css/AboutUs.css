@@ -3,7 +3,6 @@ body {
   background-color: #ffffff;
   color: #fff;
   overflow: hidden;
-
 }
 
 .main-container {
@@ -33,6 +32,9 @@ body {
   align-items: center;
   color: black;
   font-size: 50px;
+  position: relative;
+  overflow: hidden;
+  /* Ensure overflow is hidden for smooth transition */
 }
 
 .frame:hover {
@@ -54,10 +56,6 @@ body {
   align-items: center;
   transition: transform 0.3s;
 }
-
-/*.blur {
-  filter: blur(4px);
-}*/
 
 h2 {
   text-align: center;
@@ -200,4 +198,78 @@ p {
 
 .slider-nav a:hover {
   opacity: 1;
+}
+
+.social-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1.8px solid #cfcfcf;
+  height: 0;
+  font-size: 26px;
+  margin-top: 10px;
+  transition: height 0.5s ease;
+  /* Smooth height transition */
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+.frame:hover .social-links {
+  height: 39px;
+}
+
+.social-links>a {
+  flex: 1;
+  display: block;
+  /* Ensure links take up space */
+  transition: opacity 0.5s ease;
+  /* Smooth opacity transition */
+  opacity: 0;
+  /* Initially hidden */
+}
+
+.social-links>a:not(:last-child) {
+  border-right: 1.8px solid #cfcfcf;
+}
+
+.frame:hover .social-links>a {
+  opacity: 1;
+  /* Show links on hover */
+}
+
+.social-links .instagram {
+  color: #ee5487;
+  border-radius: 7px;
+  transition: color 1s ease;
+}
+
+.social-links .instagram:hover {
+  color: white;
+  background-color: #ee5487;
+}
+
+.social-links .linkedin {
+  color: #0077b5;
+  border-radius: 7px;
+  transition: color 1s ease;
+}
+
+.social-links .linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+.social-links .github {
+  color: #282C34;
+  border-radius: 7px;
+  transition: color 1s ease;
+}
+
+.social-links .github:hover {
+  background-color: #282C34;
+  color: white;
+}
+
+.blur {
+  filter: blur(5px);
 }
