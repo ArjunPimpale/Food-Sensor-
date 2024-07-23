@@ -99,6 +99,11 @@ p {
   background-size: cover;
 }
 
+.Arjun {
+  background-image: url(images/Arjun.jpg);
+  background-size: cover;
+}
+
 .group-frame {
   width: 88%;
   height: 560px;
