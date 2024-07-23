@@ -1,84 +1,75 @@
-html{
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
 
-body{
+body {
     background-image: url('nationalpark.jpg');
     background-repeat: no-repeat;
-    overflow: hidden;
     background-size: cover;
-    height:100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .container {
     padding: 0 !important;
-    position: relative!important;
     margin: 0 !important;
-    height: 200vh !important;
+    position: relative !important;
+    height: 92vh; /* Increase container height as needed */
     max-width: 100% !important;
     background-color: rgba(0, 0, 0, 0.5) !important;
+    overflow: hidden !important;
     overflow-y: auto !important;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc #f1f1f1; /* For Firefox */
 }
 
 .up {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 110%;
     background-color: rgba(0, 0, 0, 0.29);
 }
 
 .up h1 {
     color: white !important;
 }
-.about{
-    display:flex;
+
+.about {
+    display: flex;
     flex-direction: column;
-    height: 25%;
+    height: 29%;
     width: 100%;
     gap: 1px;
-    overflow-x:hidden;
-    overflow-y:auto;
-   
 }
-.aboutsection1{
-    display:flex;
+
+.aboutsection1, .aboutsection2 {
+    display: flex;
     align-items: center;
     height: 50%;
     width: 100%;
-    padding:20px;
-    gap:20px;
+    padding: 20px;
+    gap: 20px;
 }
-.aboutsection1 p{
-    width:400px;
+
+.aboutsection1 p, .aboutsection2 p {
+    width: 400px;
 }
-.aboutsection1 img{
-    width:450px;
+
+.aboutsection1 img, .aboutsection2 img {
+    width: 450px;
     height: 400px;
 }
-.aboutsection2{
-    display:flex;
+
+.aboutsection2 {
     flex-direction: row-reverse;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-    padding:20px;
-    gap:20px;
 }
-.aboutsection2 p{
-    width:400px;
-}
-.aboutsection2 img{
-    width:400px;
-    height: 400px;
-    
-   
-}
+
 .down {
-    height: 300%;
+    height: 500%;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -89,7 +80,22 @@ body{
     margin-bottom: 20px;
 }
 
+.container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
 
+.container::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scroll thumb */
+    border-radius: 6px; /* Rounded corners for the scroll thumb */
+    border: 3px solid #f1f1f1; /* Border color of the scroll thumb to match the track background */
+}
 
+.container::-webkit-scrollbar-thumb:hover {
+    background: #aaa; /* Color when hovering over the scroll thumb */
+}
 
-
+.container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 6px; /* Rounded corners for the scroll track */
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the track */
+}
