@@ -61,6 +61,17 @@ p {
     gap: 1px;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container > B {
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
 .aboutsection1, .aboutsection2 {
     display: flex;
     align-items: center;
