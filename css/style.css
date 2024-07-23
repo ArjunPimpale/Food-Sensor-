@@ -47,6 +47,12 @@ p {
     color: white !important;
 }
 
+.instruments {
+    text-align: center;
+    font-size: 40px;
+    padding: 13px;
+}
+
 .about {
     display: flex;
     flex-direction: column;
