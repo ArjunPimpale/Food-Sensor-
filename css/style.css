@@ -69,7 +69,7 @@ p {
 }
 
 .content-container > B {
-    font-size: 20px;
+    font-size: 21px;
     padding-bottom: 8px;
 }
 
@@ -79,14 +79,20 @@ p {
     height: 50%;
     width: 100%;
     padding: 20px;
-    gap: 20px;
+    gap: 40px;
 }
 
 .aboutsection1 p, .aboutsection2 p {
     width: 400px;
+    font-size: 17px;
 }
 
-.aboutsection1 img, .aboutsection2 img {
+.aboutsection1 img {
+    width: 450px;
+    height: 400px;
+}
+
+ .aboutsection2 img {
     width: 450px;
     height: 400px;
 }
