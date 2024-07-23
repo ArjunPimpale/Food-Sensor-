@@ -209,9 +209,7 @@ p {
   font-size: 26px;
   margin-top: 10px;
   transition: height 0.5s ease;
-  /* Smooth height transition */
   overflow: hidden;
-  /* Hide overflowing content */
 }
 
 .frame:hover .social-links {
@@ -221,11 +219,8 @@ p {
 .social-links>a {
   flex: 1;
   display: block;
-  /* Ensure links take up space */
   transition: opacity 0.5s ease;
-  /* Smooth opacity transition */
   opacity: 0;
-  /* Initially hidden */
 }
 
 .social-links>a:not(:last-child) {
@@ -234,7 +229,6 @@ p {
 
 .frame:hover .social-links>a {
   opacity: 1;
-  /* Show links on hover */
 }
 
 .social-links .instagram {
