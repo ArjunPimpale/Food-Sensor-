@@ -55,9 +55,9 @@ body {
   transition: transform 0.3s;
 }
 
-.blur {
+/*.blur {
   filter: blur(4px);
-}
+}*/
 
 h2 {
   text-align: center;
