@@ -84,9 +84,9 @@ $(function () {
         let gauge = $(item).dxCircularGauge('instance');
         const methaneValue = getSensorData.methane; // Access methane value
         let gaugeElement = $(gauge._$element[0]);
-        const numberElement = document.getElementById("methane");
+        const numberElement = document.getElementById("alcohol");
 const numberString = numberElement.innerHTML;
-const numberInt = parseInt(numberString);
+const numberInt = parseInt(numberString)*0.3809;
 
 console.log(numberInt); // This will output the number as an integer
         
