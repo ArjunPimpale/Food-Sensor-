@@ -177,13 +177,13 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    color:white;
+    color:rgb(255, 255, 255);
     height: 60%;
     flex:2;
     border:2px solid black;
     padding:20px;
     border-radius: 10px;
-    background-color: green;
+    background-color: rgb(197, 197, 197);
   }
  
   
@@ -205,4 +205,77 @@ p {
     background: #343333; /* Background of the scrollbar track */
     border-radius: 6px; /* Rounded corners for the scroll track */
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the track */
+}
+.gauge-container {
+    padding: 20px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .gauge {
+    height: 220px;
+    width: 300px;
+  }
+  .gauge .dxg-range.dxg-background-range {
+    fill: url(#gradientGauge);
+  }
+  .gauge .dxg-line {
+    -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+            transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+  }
+  .gauge .dxg-line path:first-child,
+  .gauge .dxg-line path:last-child {
+    display: none;
+  }
+  .gauge .dxg-line path:nth-child(2),
+  .gauge .dxg-line path:nth-child(6) {
+    stroke: #630f0f;
+  }
+  .gauge .dxg-line path:nth-child(3),
+  .gauge .dxg-line path:nth-child(5) {
+    stroke: #1e1f1d;
+  }
+  .gauge .dxg-line path:nth-child(4) {
+    stroke: #0a0a0a;
+  }
+  .gauge .dxg-elements text:first-child {
+    -webkit-transform: translate(19px, 13px);
+            transform: translate(19px, 13px);
+  }
+  .gauge .dxg-elements text:last-child {
+    -webkit-transform: translate(-27px, 14px);
+            transform: translate(-27px, 14px);
+  }
+  .gauge .dxg-value-indicator path {
+    -webkit-transform: scale(1.2) translate(0, -5px);
+            transform: scale(1.2) translate(0, -5px);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  .gauge .dxg-value-indicator .dxg-title {
+    text-transform: uppercase;
+  }
+  .gauge .dxg-value-indicator .dxg-title text:first-child {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .gauge .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+  .gauge .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+    -webkit-transform: translate(0, -109px);
+            transform: translate(0, -109px);
+  }
+  .gauge .dxg-value-indicator .dxg-spindle-hole {
+    fill: #141616;
+  }
+  .color-red {
+  stop-color: #03044f;
+}
+
+.color-yellow {
+  stop-color: #0e0795;
+}
+
+.color-green {
+  stop-color: #0082fc;
 }
