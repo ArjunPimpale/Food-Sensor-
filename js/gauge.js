@@ -92,43 +92,28 @@ $(function () {
     function updateGauges() {
       $("#gauge1").each(function (index, item) {
         let gauge = $(item).dxCircularGauge("instance");
-        const methaneValue = getSensorData.methane; // Access methane value
-        let gaugeElement = $(gauge._$element[0]);
         const numberElement = document.getElementById("alcohol");
         const numberString = numberElement.innerHTML;
         const numberInt = parseInt(numberString) * 0.3809;
-
         console.log(numberInt); // This will output the number as an integer
-
-        gaugeElement.find(".dxg-title text").last().html(`${methaneValue} ºC`);
         gauge.value(numberInt);
       });
 
       $("#gauge2").each(function (index, item) {
         let gauge = $(item).dxCircularGauge("instance");
-        const methaneValue = getSensorData.methane; // Access methane value
-        let gaugeElement = $(gauge._$element[0]);
         const numberElement = document.getElementById("methane");
         const numberString = numberElement.innerHTML;
         const numberInt = parseInt(numberString) * 0.3809;
-
         console.log(numberInt); // This will output the number as an integer
-
-        gaugeElement.find(".dxg-title text").last().html(`${methaneValue} ºC`);
         gauge.value(numberInt);
       });
 
       $("#gauge3").each(function (index, item) {
         let gauge = $(item).dxCircularGauge("instance");
-        const methaneValue = getSensorData.methane; // Access methane value
-        let gaugeElement = $(gauge._$element[0]);
         const numberElement = document.getElementById("turbidity");
         const numberString = numberElement.innerHTML;
         const numberInt = parseInt(numberString) * 0.3809;
-
         console.log(numberInt); // This will output the number as an integer
-
-        gaugeElement.find(".dxg-title text").last().html(`${methaneValue} ºC`);
         gauge.value(numberInt);
       });
     }
