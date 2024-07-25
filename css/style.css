@@ -4,7 +4,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-
+  overflow: hidden;
 }
 
 body {
@@ -26,15 +26,12 @@ body {
   margin: 0 !important;
   position: relative !important;
   height: 92vh;
-  /* Increase container height as needed */
   max-width: 100% !important;
   background-color: rgba(0, 0, 0, 0.5) !important;
   overflow: hidden !important;
   overflow-y: auto !important;
   scrollbar-width: thin;
-  /* For Firefox */
   scrollbar-color: #787777 rgba(0, 0, 0, 0.5);
-  /* For Firefox */
 }
 
 p {
@@ -73,7 +70,7 @@ p {
   align-items: center;
 }
 
-.content-container>B {
+.content-container>b {
   font-size: 21px;
   padding-bottom: 8px;
 }
@@ -94,11 +91,7 @@ p {
   font-size: 17px;
 }
 
-.aboutsection1 img {
-  width: 450px;
-  height: 400px;
-}
-
+.aboutsection1 img,
 .aboutsection2 img {
   width: 450px;
   height: 400px;
@@ -120,60 +113,32 @@ p {
   margin-bottom: 20px;
 }
 
-.FoodTester {
-  display: flex;
-
-}
-
 .item-list-container {
   width: 100%;
-  /* Adjust width as needed */
   height: 1000px;
-  /* Adjust height as needed */
   background-color: #f5f5f5;
   border-radius: 5px;
   display: flex;
-  /* Arrange elements horizontally */
-  /* Enable horizontal scrollbar on hover */
   overflow: hidden;
   gap: 20px;
-
 }
 
 .search-bar-container {
   flex: 1;
-  /* Take up remaining space within the container */
   padding: 5px;
-
-
-}
-
-.search-bar {
-  width: 100%;
-  /* Fill the container width */
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 
 .item-list {
   display: flex;
   flex-direction: column;
   height: 500px;
-  /* width:180px; */
   flex: 1;
   flex-wrap: nowrap;
-  /* Items won't wrap to next line */
   white-space: nowrap;
-  /* Prevent text wrapping within buttons */
-  /* Enable horizontal scrollbar always */
   overflow-y: auto;
   scrollbar-width: thin;
-  /* For Firefox */
   scrollbar-color: #8a0f0f rgba(200, 14, 14, 0.5);
-  /* For Firefox */
   padding: 5px;
-
 }
 
 .item-list button {
@@ -231,30 +196,22 @@ p {
 
 .container::-webkit-scrollbar {
   width: 12px;
-  /* Width of the scrollbar */
 }
 
 .container::-webkit-scrollbar-thumb {
   background: #313030;
-  /* Color of the scroll thumb */
   border-radius: 6px;
-  /* Rounded corners for the scroll thumb */
   border: 3px solid #f1f1f1;
-  /* Border color of the scroll thumb to match the track background */
 }
 
 .container::-webkit-scrollbar-thumb:hover {
   background: #252424;
-  /* Color when hovering over the scroll thumb */
 }
 
 .container::-webkit-scrollbar-track {
   background: #343333;
-  /* Background of the scrollbar track */
   border-radius: 6px;
-  /* Rounded corners for the scroll track */
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for the track */
 }
 
 .gauge-container {
@@ -274,7 +231,6 @@ p {
 }
 
 .gauge .dxg-line {
-  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
   transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
 }
 
@@ -298,19 +254,15 @@ p {
 }
 
 .gauge .dxg-elements text:first-child {
-  -webkit-transform: translate(19px, 13px);
   transform: translate(19px, 13px);
 }
 
 .gauge .dxg-elements text:last-child {
-  -webkit-transform: translate(-27px, 14px);
   transform: translate(-27px, 14px);
 }
 
 .gauge .dxg-value-indicator path {
-  -webkit-transform: scale(1.2) translate(0, -5px);
   transform: scale(1.2) translate(0, -5px);
-  -webkit-transform-origin: center center;
   transform-origin: center center;
 }
 
@@ -319,13 +271,11 @@ p {
 }
 
 .gauge .dxg-value-indicator .dxg-title text:first-child {
-  -webkit-transform: translateY(5px);
   transform: translateY(5px);
 }
 
 .gauge .dxg-value-indicator .dxg-spindle-border:nth-child(4),
 .gauge .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
-  -webkit-transform: translate(0, -109px);
   transform: translate(0, -109px);
 }
 
@@ -343,4 +293,75 @@ p {
 
 .color-green {
   stop-color: #0082fc;
+}
+
+/* Media Queries for Smartphones */
+@media (max-width: 600px) {
+  .navbar {
+    font-size: 14px;
+  }
+  .container{
+    height:150vh;
+  }
+  .up {
+    height: 100%;
+  }
+
+  .up h1 {
+    font-size: 24px;
+  }
+ 
+
+  .instruments {
+    font-size: 28px;
+    padding: 8px;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .aboutsection1,
+  .aboutsection2 {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .aboutsection1 img,
+  .aboutsection2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutsection1 p,
+  .aboutsection2 p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .item-list-container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .OutputBox {
+    flex: 1;
+    width: 100%;
+  }
+
+  .choice-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .gauge-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gauge {
+    width: 100%;
+    height: auto;
+  }
 }
