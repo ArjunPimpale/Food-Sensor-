@@ -1,298 +1,338 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 
 }
 
 body {
-    background-image: url('images/nationalpark.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
+  background-image: url('images/nationalpark.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
-.navbar{
-    color:white !important;
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    backdrop-filter: blur(10px);
+
+.navbar {
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(10px);
 }
 
 .container {
-    padding: 0 !important;
-    margin: 0 !important;
-    position: relative !important;
-    height: 92vh; /* Increase container height as needed */
-    max-width: 100% !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    overflow: hidden !important;
-    overflow-y: auto !important;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #787777  rgba(0, 0, 0, 0.5); /* For Firefox */
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+  height: 92vh;
+  /* Increase container height as needed */
+  max-width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: #787777 rgba(0, 0, 0, 0.5);
+  /* For Firefox */
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 .up {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110%;
-    background-color: rgba(0, 0, 0, 0.29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110%;
+  background-color: rgba(0, 0, 0, 0.29);
 }
 
 .up h1 {
-    color: white !important;
+  color: white !important;
 }
 
 .instruments {
-    text-align: center;
-    font-size: 40px;
-    padding: 13px;
+  text-align: center;
+  font-size: 40px;
+  padding: 13px;
 }
 
 .about {
-    display: flex;
-    flex-direction: column;
-    height: 29%;
-    width: 100%;
-    gap: 1px;
+  display: flex;
+  flex-direction: column;
+  height: 29%;
+  width: 100%;
+  gap: 1px;
 }
 
 .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.content-container > B {
-    font-size: 21px;
-    padding-bottom: 8px;
+.content-container>B {
+  font-size: 21px;
+  padding-bottom: 8px;
 }
 
-.aboutsection1, .aboutsection2 {
-    display: flex;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-    padding: 20px;
-    gap: 40px;
+.aboutsection1,
+.aboutsection2 {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  padding: 20px;
+  gap: 40px;
 }
 
-.aboutsection1 p, .aboutsection2 p {
-    width: 400px;
-    font-size: 17px;
+.aboutsection1 p,
+.aboutsection2 p {
+  width: 400px;
+  font-size: 17px;
 }
 
 .aboutsection1 img {
-    width: 450px;
-    height: 400px;
+  width: 450px;
+  height: 400px;
 }
 
- .aboutsection2 img {
-    width: 450px;
-    height: 400px;
+.aboutsection2 img {
+  width: 450px;
+  height: 400px;
 }
 
 .aboutsection2 {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .down {
-    height: 540%;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+  height: 540%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .down h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.FoodTester{
-    display:flex;
+.FoodTester {
+  display: flex;
 
 }
 
 .item-list-container {
-    width: 100%; /* Adjust width as needed */
-    height: 1000px; /* Adjust height as needed */
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    display: flex; 
-   /* Arrange elements horizontally */
-   /* Enable horizontal scrollbar on hover */
-    overflow:hidden;
-    gap:20px;
+  width: 100%;
+  /* Adjust width as needed */
+  height: 1000px;
+  /* Adjust height as needed */
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  /* Arrange elements horizontally */
+  /* Enable horizontal scrollbar on hover */
+  overflow: hidden;
+  gap: 20px;
 
 }
 
 .search-bar-container {
-    flex: 1; /* Take up remaining space within the container */
-    padding: 5px;
-   
-    
+  flex: 1;
+  /* Take up remaining space within the container */
+  padding: 5px;
+
+
 }
 
 .search-bar {
-    width: 100%; /* Fill the container width */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: 100%;
+  /* Fill the container width */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 .item-list {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    /* width:180px; */
-    flex:1;
-    flex-wrap: nowrap; /* Items won't wrap to next line */
-    white-space: nowrap; /* Prevent text wrapping within buttons */
-    /* Enable horizontal scrollbar always */
-    overflow-y: auto;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #8a0f0f  rgba(200, 14, 14, 0.5); /* For Firefox */
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  /* width:180px; */
+  flex: 1;
+  flex-wrap: nowrap;
+  /* Items won't wrap to next line */
+  white-space: nowrap;
+  /* Prevent text wrapping within buttons */
+  /* Enable horizontal scrollbar always */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: #8a0f0f rgba(200, 14, 14, 0.5);
+  /* For Firefox */
+  padding: 5px;
 
-  }
-  
-  .item-list button {
-    margin: 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .item-list button:hover {
-    background-color: #eee;
-  }
-  .OutputBox{
-    display: flex;
-    justify-content: center;
-    align-items:start;
-    flex-wrap: wrap;
-    color:rgb(255, 255, 255);
-    height: 100%;
-    flex:2;
-    border:2px solid black;
-    border-radius: 10px;
-    background-color: rgb(197, 197, 197);
-  }
- 
-  .choice-container {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
+}
+
+.item-list button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.item-list button:hover {
+  background-color: #eee;
+}
+
+.OutputBox {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  flex: 2;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(197, 197, 197);
+}
+
+.choice-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
 }
 
 .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    cursor: pointer;
-    outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
 }
 
 .item img {
-    max-width: 60px;
-    max-height: 60px;
+  max-width: 60px;
+  max-height: 60px;
 }
 
 .item:active {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
-  .container::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+
+.container::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
 }
 
 .container::-webkit-scrollbar-thumb {
-    background: #313030; /* Color of the scroll thumb */
-    border-radius: 6px; /* Rounded corners for the scroll thumb */
-    border: 3px solid #f1f1f1; /* Border color of the scroll thumb to match the track background */
+  background: #313030;
+  /* Color of the scroll thumb */
+  border-radius: 6px;
+  /* Rounded corners for the scroll thumb */
+  border: 3px solid #f1f1f1;
+  /* Border color of the scroll thumb to match the track background */
 }
 
 .container::-webkit-scrollbar-thumb:hover {
-    background: #252424; /* Color when hovering over the scroll thumb */
+  background: #252424;
+  /* Color when hovering over the scroll thumb */
 }
 
 .container::-webkit-scrollbar-track {
-    background: #343333; /* Background of the scrollbar track */
-    border-radius: 6px; /* Rounded corners for the scroll track */
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the track */
+  background: #343333;
+  /* Background of the scrollbar track */
+  border-radius: 6px;
+  /* Rounded corners for the scroll track */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for the track */
 }
+
 .gauge-container {
-    padding: 20px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .gauge {
-    height: 220px;
-    width: 300px;
-  }
-  .gauge .dxg-range.dxg-background-range {
-    fill: url(#gradientGauge);
-  }
-  .gauge .dxg-line {
-    -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
-            transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
-  }
-  .gauge .dxg-line path:first-child,
-  .gauge .dxg-line path:last-child {
-    display: none;
-  }
-  .gauge .dxg-line path:nth-child(2),
-  .gauge .dxg-line path:nth-child(6) {
-    stroke: #630f0f;
-  }
-  .gauge .dxg-line path:nth-child(3),
-  .gauge .dxg-line path:nth-child(5) {
-    stroke: #1e1f1d;
-  }
-  .gauge .dxg-line path:nth-child(4) {
-    stroke: #0a0a0a;
-  }
-  .gauge .dxg-elements text:first-child {
-    -webkit-transform: translate(19px, 13px);
-            transform: translate(19px, 13px);
-  }
-  .gauge .dxg-elements text:last-child {
-    -webkit-transform: translate(-27px, 14px);
-            transform: translate(-27px, 14px);
-  }
-  .gauge .dxg-value-indicator path {
-    -webkit-transform: scale(1.2) translate(0, -5px);
-            transform: scale(1.2) translate(0, -5px);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-  }
-  .gauge .dxg-value-indicator .dxg-title {
-    text-transform: uppercase;
-  }
-  .gauge .dxg-value-indicator .dxg-title text:first-child {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-  .gauge .dxg-value-indicator .dxg-spindle-border:nth-child(4),
-  .gauge .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
-    -webkit-transform: translate(0, -109px);
-            transform: translate(0, -109px);
-  }
-  .gauge .dxg-value-indicator .dxg-spindle-hole {
-    fill: #141616;
-  }
-  .color-red {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gauge {
+  height: 220px;
+  width: 300px;
+}
+
+.gauge .dxg-range.dxg-background-range {
+  fill: url(#gradientGauge);
+}
+
+.gauge .dxg-line {
+  -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+  transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gauge .dxg-line path:first-child,
+.gauge .dxg-line path:last-child {
+  display: none;
+}
+
+.gauge .dxg-line path:nth-child(2),
+.gauge .dxg-line path:nth-child(6) {
+  stroke: #630f0f;
+}
+
+.gauge .dxg-line path:nth-child(3),
+.gauge .dxg-line path:nth-child(5) {
+  stroke: #1e1f1d;
+}
+
+.gauge .dxg-line path:nth-child(4) {
+  stroke: #0a0a0a;
+}
+
+.gauge .dxg-elements text:first-child {
+  -webkit-transform: translate(19px, 13px);
+  transform: translate(19px, 13px);
+}
+
+.gauge .dxg-elements text:last-child {
+  -webkit-transform: translate(-27px, 14px);
+  transform: translate(-27px, 14px);
+}
+
+.gauge .dxg-value-indicator path {
+  -webkit-transform: scale(1.2) translate(0, -5px);
+  transform: scale(1.2) translate(0, -5px);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.gauge .dxg-value-indicator .dxg-title {
+  text-transform: uppercase;
+}
+
+.gauge .dxg-value-indicator .dxg-title text:first-child {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+
+.gauge .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gauge .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+  -webkit-transform: translate(0, -109px);
+  transform: translate(0, -109px);
+}
+
+.gauge .dxg-value-indicator .dxg-spindle-hole {
+  fill: #141616;
+}
+
+.color-red {
   stop-color: #03044f;
 }
 
