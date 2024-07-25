@@ -14,7 +14,7 @@
     <div id="label-container"></div>
     
     <script type="text/javascript">
-        const URL = "./my_model/";
+        const URL = "my_model/";
 
         let model, webcam, labelContainer, maxPredictions;
 
@@ -51,6 +51,13 @@
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // WebRTC is supported
+    console.log('WebRTC is supported');
+  } else {
+    // WebRTC is not supported
+    console.error('Your browser does not support WebRTC.');
+  }
     </script>
 </body>
 </html>
