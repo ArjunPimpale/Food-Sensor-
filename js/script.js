@@ -42,3 +42,9 @@
   setInterval(fetchSensorData, 1000);
   fetchSensorData(); // Initial call
 })();
+
+
+
+document.querySelectorAll(".item").forEach(element => {
+    element.innerHTML = `<img src="css/svgs/banana.svg" alt="banana">`
+});

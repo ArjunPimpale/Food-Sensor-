@@ -45,7 +45,7 @@ $(function () {
           font: {
             family: '"Open Sans", sans-serif',
             color: "#fff",
-            size: 10,
+            size: 15,
           },
 
           subtitle: {
@@ -54,7 +54,7 @@ $(function () {
               family: '"Open Sans", sans-serif',
               color: "#fff",
               weight: 700,
-              size: 28,
+              size: 20,
             },
           },
         },
@@ -77,12 +77,34 @@ $(function () {
   }
 
   $(document).ready(function () {
-    $(".gauge").each(function (index, item) {
+    $("#gauge1").each(function (index, item) {
       let params = {
         initialValue: 780,
         higherValue: 1560,
-        title: `Temperature ${index + 1}`,
-        subtitle: "780 ºC",
+        title: `Sensor Values ${index + 1}`,
+        subtitle: "AlcoholValue",
+      };
+
+      let gauge = new GaugeChart(item, params);
+      gauge.init();
+    });
+    $("#gauge2").each(function (index, item) {
+      let params = {
+        initialValue: 780,
+        higherValue: 1560,
+        title: `Sensor Values ${index + 1}`,
+        subtitle: "MethaneValue",
+      };
+
+      let gauge = new GaugeChart(item, params);
+      gauge.init();
+    });
+    $("#gauge3").each(function (index, item) {
+      let params = {
+        initialValue: 780,
+        higherValue: 1560,
+        title: `Sensor Values ${index + 1}`,
+        subtitle: "TurbidityValue",
       };
 
       let gauge = new GaugeChart(item, params);
@@ -97,6 +119,7 @@ $(function () {
         const numberInt = parseInt(numberString) * 0.3809;
         console.log(numberInt); // This will output the number as an integer
         gauge.value(numberInt);
+      
       });
 
       $("#gauge2").each(function (index, item) {
