@@ -1,43 +1,79 @@
 const URL = "my_model/";
 
 let model, webcam, labelContainer, maxPredictions;
+let isPredicting = false;
+let loopRequestId = null;
 
 async function init() {
   const modelURL = URL + "model.json";
   const metadataURL = URL + "metadata.json";
-
+  
   model = await tmImage.load(modelURL, metadataURL);
   maxPredictions = model.getTotalClasses();
-
+  
   const flip = true;
   webcam = new tmImage.Webcam(200, 200, flip);
   await webcam.setup();
-  await webcam.play();
-  window.requestAnimationFrame(loop);
-
-  document.getElementById("webcam-container").appendChild(webcam.canvas);
+  
   labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
     labelContainer.appendChild(document.createElement("div"));
+  }
+
+  // Append the webcam canvas to the container
+  document.getElementById("webcam-container").appendChild(webcam.canvas);
+}
+
+async function start() {
+  if (!isPredicting) {
+    await webcam.play();
+    isPredicting = true;
+    window.requestAnimationFrame(loop);
+  }
+}
+
+function stop() {
+  if (isPredicting) {
+    webcam.stop();
+    isPredicting = false;
+    if (loopRequestId) {
+      window.cancelAnimationFrame(loopRequestId);
+      loopRequestId = null;
+    }
   }
 }
 
 async function loop() {
   webcam.update();
   await predict();
-  window.requestAnimationFrame(loop);
+  if (isPredicting) {
+    loopRequestId = window.requestAnimationFrame(loop);
+  }
 }
 
 async function predict() {
   const prediction = await model.predict(webcam.canvas);
   for (let i = 0; i < maxPredictions; i++) {
     const classPrediction =
-      prediction[i].className +
-      ": " +
-      prediction[i].probability.toFixed(2);
+      prediction[i].className + ": " + prediction[i].probability.toFixed(2);
     labelContainer.childNodes[i].innerHTML = classPrediction;
   }
 }
+let button = document.getElementById("aibutton")
+let webcamcont = document.getElementById("webcam-container")
+let labelcont = document.getElementById("label-container")
+document.getElementById("aibutton").addEventListener("click", function() {
+  if (isPredicting) {
+    stop();
+    button.innerHTML = "Start"
+    webcamcont.innerHTML = ""
+    labelcont.innerHTML = ""
+  } else {
+    init().then(start);
+    button.innerHTML = "Stop"
+  }
+});
+
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
   // WebRTC is supported
   console.log("WebRTC is supported");
