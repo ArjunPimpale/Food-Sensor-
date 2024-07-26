@@ -47,9 +47,8 @@ async function loop() {
   webcam.update();
   await predict();
   if (isPredicting) {
-    setTimeout(() => {
       loopRequestId = window.requestAnimationFrame(loop);
-    }, 5000); // 5-second delay between predictions
+     // 5-second delay between predictions
   }
 }
 
@@ -58,7 +57,9 @@ async function predict() {
   for (let i = 0; i < maxPredictions; i++) {
     const classPrediction =
       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-    labelContainer.childNodes[i].innerHTML = classPrediction;
+      labelContainer.childNodes[i].innerHTML = classPrediction;
+      
+  
     
   }
 }
