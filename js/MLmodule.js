@@ -28,7 +28,7 @@ async function start() {
   if (!isPredicting) {
     await webcam.play();
     isPredicting = true;
-    window.requestAnimationFrame(loop);
+    loop();
   }
 }
 
@@ -47,7 +47,9 @@ async function loop() {
   webcam.update();
   await predict();
   if (isPredicting) {
-    loopRequestId = window.requestAnimationFrame(loop);
+    setTimeout(() => {
+      loopRequestId = window.requestAnimationFrame(loop);
+    }, 5000); // 5-second delay between predictions
   }
 }
 
@@ -57,20 +59,22 @@ async function predict() {
     const classPrediction =
       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
     labelContainer.childNodes[i].innerHTML = classPrediction;
+    
   }
 }
-let button = document.getElementById("aibutton")
-let webcamcont = document.getElementById("webcam-container")
-let labelcont = document.getElementById("label-container")
+
+let button = document.getElementById("aibutton");
+let webcamcont = document.getElementById("webcam-container");
+let labelcont = document.getElementById("label-container");
 document.getElementById("aibutton").addEventListener("click", function() {
   if (isPredicting) {
     stop();
-    button.innerHTML = "Start"
-    webcamcont.innerHTML = ""
-    labelcont.innerHTML = ""
+    button.innerHTML = "Start";
+    webcamcont.innerHTML = "";
+    labelcont.innerHTML = "";
   } else {
     init().then(start);
-    button.innerHTML = "Stop"
+    button.innerHTML = "Stop";
   }
 });
 
