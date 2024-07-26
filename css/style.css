@@ -156,8 +156,8 @@ p {
 .OutputBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  justify-content: start;
+  align-items: center;
   flex-wrap: wrap;
   color: rgb(255, 255, 255);
   height: 100%;
