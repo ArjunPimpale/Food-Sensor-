@@ -12,7 +12,7 @@ async function init() {
   maxPredictions = model.getTotalClasses();
   
   const flip = true;
-  webcam = new tmImage.Webcam(200, 200, flip);
+  webcam = new tmImage.Webcam(400, 300, flip);
   await webcam.setup();
   
   labelContainer = document.getElementById("label-container");
@@ -58,7 +58,7 @@ async function predict() {
     const classPrediction =
       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
       labelContainer.childNodes[i].innerHTML = classPrediction;
-      
+    
   
     
   }
@@ -71,11 +71,13 @@ document.getElementById("aibutton").addEventListener("click", function() {
   if (isPredicting) {
     stop();
     button.innerHTML = "Start";
+    button.className = "btn btn-success"
     webcamcont.innerHTML = "";
     labelcont.innerHTML = "";
   } else {
     init().then(start);
     button.innerHTML = "Stop";
+    button.className = "btn btn-danger"
   }
 });
 
