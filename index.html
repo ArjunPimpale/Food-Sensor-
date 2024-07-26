@@ -58,7 +58,7 @@
         </div>
         <div class="aboutsection1" data-aos="fade-right">
           <a href="https://en.wikipedia.org/wiki/ESP32">
-            <img src="sensorImages/ESP32.jpg" class="rounded" alt="ESP32" />
+            <img src="sensorImages/ESP32.jpg" class="rounded" alt="ESP32" loading="lazy" />
           </a>
           <div class="content-container">
             <b>ESP32</b>
@@ -76,7 +76,7 @@
         </div>
         <div class="aboutsection2" data-aos="fade-left">
           <a href="https://apureinstrument.com/blogs/about-ph-sensor/">
-            <img src="sensorImages/phSensor.jpg" alt="PH sensor" />
+            <img src="sensorImages/phSensor.jpg" alt="PH sensor" loading="lazy" />
           </a>
           <div class="content-container">
             <b>PH Sensor</b>
@@ -95,7 +95,7 @@
       <div class="about">
         <div class="aboutsection1" data-aos="fade-right">
           <a href="https://www.hnhcart.com/blogs/sensors-modules/tcs-3200-color-sensor">
-            <img src="sensorImages/TCS3200.jpg" class="rounded" alt="TCS3200 color sensor" />
+            <img src="sensorImages/TCS3200.jpg" class="rounded" alt="TCS3200 color sensor" loading="lazy" />
           </a>
           <div class="content-container">
             <b>TCS3200 Color Sensor</b>
@@ -112,7 +112,7 @@
         <div class="aboutsection2" data-aos="fade-left">
           <a
             href="https://atlas-scientific.com/blog/what-is-a-turbidity-sensor/#:~:text=Turbidity%20sensors%20are%20a%20piece,analytical%20sensor%20that%20measures%20turbidity.">
-            <img src="sensorImages/turbidity.jpg" alt="Turbidity sensor" />
+            <img src="sensorImages/turbidity.jpg" alt="Turbidity sensor" loading="lazy" />
           </a>
           <div class="content-container">
             <b>Turbidity Sensor</b>
@@ -132,7 +132,7 @@
         <div class="aboutsection1" data-aos="fade-right">
           <a
             href="https://www.rajguruelectronics.com/ProductView?tokDatRef=MTA5NQ==&tokenId=Mzk=&product=MQ3%20GAS%20SENSOR#:~:text=Gas%20Sensor(MQ3)%20module%20is,adjusted%20by%20using%20the%20potentiometer.">
-            <img src="sensorImages/Mq3.jpg" class="rounded" alt="Mq3 sensor" />
+            <img src="sensorImages/Mq3.jpg" class="rounded" alt="Mq3 sensor" loading="lazy" />
           </a>
           <div class="content-container">
             <b>MQ3 Alcohol Gas Sensor</b>
@@ -148,7 +148,7 @@
         </div>
         <div class="aboutsection2" data-aos="fade-left">
           <a href="https://www.elprocus.com/mq4-methane-gas-sensor/">
-            <img src="sensorImages/MQ4.jpg" alt="MQ4 sensor" />
+            <img src="sensorImages/MQ4.jpg" alt="MQ4 sensor" loading="lazy" />
           </a>
           <div class="content-container">
             <b>MQ4 Methane Gas Sensor</b>
@@ -201,30 +201,8 @@
         </tbody>
       </table>
 
-
       <div class="item-list-container">
         <div class="choice-container">
-          <button class="item">
-            <img src="css/svgs/banana.svg" alt="Apple" />
-          </button>
-          <button class="item"><img src="css/svgs/bread.svg" alt="Banana" /></button>
-          <button class="item"><img src="bread.png" alt="Bread" /></button>
-          <button class="item"><img src="milk.png" alt="Milk" /></button>
-
-          <button class="item"><img src="cheese.png" alt="Cheese" /></button>
-          <button class="item"></button>
-          <button class="item"></button>
-          <button class="item"></button>
-
-          <button class="item"></button>
-          <button class="item"></button>
-          <button class="item"></button>
-          <button class="item"></button>
-
-          <button class="item"></button>
-          <button class="item"></button>
-          <button class="item"></button>
-          <button class="item"></button>
         </div>
         <div class="OutputBox">
           <div class="gauge-container">
@@ -260,15 +238,15 @@
   <script src="js/ListItemsScript.js"></script>
   <script>
     AOS.init({
-      offset: 120, // Offset (in px) from the original trigger point
-      duration: 1000, // Duration of animations (in ms)
-      easing: "ease-in-out", // Easing function for animations
-      once: false, // Whether animation should happen only once - while scrolling down
+      offset: 120, 
+      duration: 1000, 
+      easing: "ease-in-out", 
+      once: false, 
     });
 
-    // Reinitialize AOS to work with specific container
+
     document.querySelector(".container").addEventListener("scroll", () => {
-      AOS.refresh(); // Refresh AOS animations based on scroll position
+      AOS.refresh(); 
     });
   </script>
   <script src="js/gauge.js"></script>
