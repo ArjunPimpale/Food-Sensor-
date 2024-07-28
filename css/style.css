@@ -306,10 +306,10 @@ p {
   }
   
   .container{
-    height:155vh;
+    height:130vh;
   }
   .up {
-    height: 100%;
+    height: 50%;
   }
 
   .up h1 {
