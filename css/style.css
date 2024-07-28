@@ -355,12 +355,15 @@ p {
 .button-4:-webkit-details-marker {
   display: none;
 }
-
+.item-list-container{
+  display: flex;
+}
 /* Media Queries for Smartphones */
 @media (max-width: 800px) {
   .navbar {
     font-size: 14px;
   }
+  
   .container{
     height:155vh;
   }
@@ -409,9 +412,8 @@ p {
     width: 100%;
   }
 
-  .choice-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  .item-list-container{
+    flex-direction: column;
   }
 
   .gauge-container {
