@@ -1,3 +1,18 @@
+const buttons = document.querySelectorAll('.item-button');
+
+// Add click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove 'active' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('activate'));
+
+        // Add 'active' class to the clicked button
+        button.classList.add('activate');
+    });
+});
+
+
+
 (function() {
   const channelId = '2599999';
   const apiKey = 'SX2MQRH2IHLWECII';

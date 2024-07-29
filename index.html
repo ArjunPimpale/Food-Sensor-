@@ -10,6 +10,9 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -69,12 +72,15 @@
 
     <div class="container" data-aos-container="true">
       <div class="up">
-        <h1>Food Sensor Application.</h1>
+        <h1 class = "canelafont">Food Sensor Application.</h1>
       </div>
       <div class="down">
         <div class="about">
-          <div class="instruments bg-danger" >
-            <b>Instruments Used</b>
+          
+          <div class="instruments" >
+            <div class="design-line"></div>
+            <b>INSTRUMENTS  USED</b>
+            <div class="design-line"></div>
           </div>
           <div class="aboutsection1" data-aos="fade-right">
             <a href="https://en.wikipedia.org/wiki/ESP32">
@@ -87,6 +93,7 @@
             </a>
             <div class="content-container">
               <b>ESP32</b>
+              <div class="design-line"></div>
               <p>
                 The ESP32 is a low-cost, low-power system on a chip (SoC) with
                 integrated Wi-Fi and dual-mode Bluetooth. It is developed by
@@ -105,10 +112,12 @@
                 src="sensorImages/phSensor.jpg"
                 alt="PH sensor"
                 loading="lazy"
+                class = "rounded"
               />
             </a>
             <div class="content-container">
               <b>PH Sensor</b>
+              <div class="design-line"></div>
               <p>
                 A pH sensor measures the hydrogen-ion activity in solutions,
                 indicating its acidity or alkalinity. Key points include:
@@ -135,6 +144,7 @@
             </a>
             <div class="content-container">
               <b>TCS3200 Color Sensor</b>
+              <div class="design-line"></div>
               <p>
                 The TCS3200 is a programmable color light-to-frequency
                 converter. It can detect and measure the intensity of red,
@@ -145,7 +155,7 @@
               </p>
             </div>
           </div>
-          <div class="aboutsection2" data-aos="fade-left">
+          <div class="aboutsection2 " data-aos="fade-left">
             <a
               href="https://atlas-scientific.com/blog/what-is-a-turbidity-sensor/#:~:text=Turbidity%20sensors%20are%20a%20piece,analytical%20sensor%20that%20measures%20turbidity."
             >
@@ -153,10 +163,12 @@
                 src="sensorImages/turbidity.jpg"
                 alt="Turbidity sensor"
                 loading="lazy"
+                class = "rounded"
               />
             </a>
             <div class="content-container">
               <b>Turbidity Sensor</b>
+              <div class="design-line"></div>
               <p>
                 A turbidity sensor measures the cloudiness or haziness of a
                 fluid caused by particles. It is commonly used to assess water
@@ -176,13 +188,14 @@
             >
               <img
                 src="sensorImages/Mq3.jpg"
-                class="rounded"
                 alt="Mq3 sensor"
                 loading="lazy"
+                class = "rounded"
               />
             </a>
             <div class="content-container">
               <b>MQ3 Alcohol Gas Sensor</b>
+              <div class="design-line"></div>
               <p>
                 The MQ3 is a semiconductor sensor for detecting alcohol. Key
                 features include: High sensitivity to alcohol and good
@@ -193,12 +206,13 @@
               </p>
             </div>
           </div>
-          <div class="aboutsection2" data-aos="fade-left">
+          <div class="aboutsection2 rounded" data-aos="fade-left">
             <a href="https://www.elprocus.com/mq4-methane-gas-sensor/">
-              <img src="sensorImages/MQ4.jpg" alt="MQ4 sensor" loading="lazy" />
+              <img src="sensorImages/MQ4.jpg" alt="MQ4 sensor" loading="lazy" class = "rounded"/>
             </a>
             <div class="content-container">
               <b>MQ4 Methane Gas Sensor</b>
+              <div class="design-line"></div>
               <p>
                 The MQ4 is a semiconductor sensor for detecting methane (CH4).
                 Key points include: High sensitivity to methane and other
@@ -250,7 +264,7 @@
 
         <div class="item-list-container">
           <div class="webcamsection">
-            <button id = "aibutton" class="btn btn-success">
+            <button id = "aibutton" class="btn button-animation">
               Start
             </button>
             <div id="webcam-container"></div>
@@ -264,16 +278,16 @@
             </div>
             <div class="food-stats">
               <div class="left-stat">
-                <button onclick="showOutput('Water')" class="btn btn-secondary">
+                <button  class="item-button btn">
                   Water
                 </button>
-                <button onclick="showOutput('Vegetables')" class="btn btn-secondary">
+                <button  class="item-button btn">
                   Vegetables
                 </button>
-                <button onclick="showOutput('Milk')" class="btn btn-secondary">
+                <button  class="item-button btn">
                   Milk
                 </button>
-                <button onclick="showOutput('Fruits')" class="btn btn-secondary">
+                <button  class="item-button btn">
                   Fruits
                 </button>
               </div>

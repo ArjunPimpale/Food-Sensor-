@@ -1,5 +1,6 @@
 const URL = "my_model/";
 
+
 let model, webcam, labelContainer, maxPredictions;
 let isPredicting = false;
 let loopRequestId = null;
@@ -12,7 +13,7 @@ async function init() {
   maxPredictions = model.getTotalClasses();
   
   const flip = true;
-  webcam = new tmImage.Webcam(400, 300, flip);
+  webcam = new tmImage.Webcam(400, 285, flip);
   await webcam.setup();
   
   labelContainer = document.getElementById("label-container");
@@ -65,21 +66,24 @@ async function predict() {
 }
 
 let button = document.getElementById("aibutton");
+  button.style.background = "linear-gradient(to right, purple, blue)"
 let webcamcont = document.getElementById("webcam-container");
 let labelcont = document.getElementById("label-container");
 document.getElementById("aibutton").addEventListener("click", function() {
   if (isPredicting) {
     stop();
-    button.innerHTML = "Start";
-    button.className = "btn btn-success"
+    button.innerHTML = "Start"; // Remove the animation class
+    button.style.background = "linear-gradient(to right, purple, blue)"; // Set the original background
     webcamcont.innerHTML = "";
     labelcont.innerHTML = "";
   } else {
     init().then(start);
     button.innerHTML = "Stop";
-    button.className = "btn btn-danger"
+    button.style.background = "linear-gradient(to right, crimson, purple)";
+    button.classList.add("animateBackground");
   }
 });
+
 
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
   // WebRTC is supported

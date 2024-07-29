@@ -81,7 +81,7 @@ $(function () {
       let params = {
         initialValue: 780,
         higherValue: 1560,
-        title: `Sensor Values ${index + 1}`,
+        title: `Sensor Values`,
         subtitle: "AlcoholValue",
       };
 
@@ -92,7 +92,7 @@ $(function () {
       let params = {
         initialValue: 780,
         higherValue: 1560,
-        title: `Sensor Values ${index + 1}`,
+        title: `Sensor Values`,
         subtitle: "MethaneValue",
       };
 
@@ -103,7 +103,7 @@ $(function () {
       let params = {
         initialValue: 780,
         higherValue: 1560,
-        title: `Sensor Values ${index + 1}`,
+        title: `Sensor Values`,
         subtitle: "TurbidityValue",
       };
 
