@@ -1,6 +1,5 @@
 const URL = "my_model/";
 
-
 let model, webcam, labelContainer, maxPredictions;
 let isPredicting = false;
 let loopRequestId = null;
@@ -48,32 +47,35 @@ async function loop() {
   webcam.update();
   await predict();
   if (isPredicting) {
-      loopRequestId = window.requestAnimationFrame(loop);
-     // 5-second delay between predictions
+    loopRequestId = window.requestAnimationFrame(loop);
   }
 }
 
+let lastUpdate = 0;
 async function predict() {
   const prediction = await model.predict(webcam.canvas);
-  for (let i = 0; i < maxPredictions; i++) {
-    const classPrediction =
-      prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+  const now = Date.now();
+
+  if (now - lastUpdate > 1000) { // 0.5-second delay
+    for (let i = 0; i < maxPredictions; i++) {
+      const classPrediction =
+        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
       labelContainer.childNodes[i].innerHTML = classPrediction;
-    
-  
-    
+    }
+    lastUpdate = now;
   }
 }
 
 let button = document.getElementById("aibutton");
-  button.style.background = "linear-gradient(to right, purple, blue)"
+button.style.background = "linear-gradient(to right, purple, blue)";
 let webcamcont = document.getElementById("webcam-container");
 let labelcont = document.getElementById("label-container");
+
 document.getElementById("aibutton").addEventListener("click", function() {
   if (isPredicting) {
     stop();
-    button.innerHTML = "Start"; // Remove the animation class
-    button.style.background = "linear-gradient(to right, purple, blue)"; // Set the original background
+    button.innerHTML = "Start"; 
+    button.style.background = "linear-gradient(to right, purple, blue)"; 
     webcamcont.innerHTML = "";
     labelcont.innerHTML = "";
   } else {
@@ -84,11 +86,8 @@ document.getElementById("aibutton").addEventListener("click", function() {
   }
 });
 
-
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-  // WebRTC is supported
   console.log("WebRTC is supported");
 } else {
-  // WebRTC is not supported
   console.error("Your browser does not support WebRTC.");
 }
