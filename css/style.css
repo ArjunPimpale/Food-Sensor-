@@ -427,7 +427,7 @@ p {
   display: flex;
 }
 /* Media Queries for Smartphones */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   body{
     background-position: center;
   }
