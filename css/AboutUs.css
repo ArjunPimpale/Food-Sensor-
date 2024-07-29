@@ -17,11 +17,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 110%;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .down {
-  background-color:  white;
+  background-color:   rgb(35 36 51);
   color:rgb(0, 0, 0);
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .frame {
-  background-color: #c5c5c5;
+  background-color: rgb(47, 48, 67);
   margin: 10px;
   width: 270px;
   padding: 10px;

@@ -91,6 +91,7 @@ p {
   height: 29%;
   width: 100%;
   gap: 1px;
+  color:white;
 }
 
 .content-container  {
@@ -146,7 +147,7 @@ p {
   display: flex;
   color:rgb(0, 0, 0);
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
+  background-color:   rgb(35 36 51);
 }
 
 .down h1 {
