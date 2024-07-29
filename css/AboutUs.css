@@ -158,6 +158,16 @@ p {
   background-size: cover;
 }
 
+.Jeet {
+  background-image: url(images/Jeet.jpg);
+  background-size: cover;
+}
+
+.Aishwarya {
+  background-image: url(images/Aishwarya.jpg);
+  background-size: cover;
+}
+
 .group-frame {
   width: 88%;
   height: 560px;
