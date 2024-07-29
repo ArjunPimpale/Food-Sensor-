@@ -144,9 +144,9 @@ p {
 .down {
   height: 540%;
   display: flex;
-  color:white;
+  color:rgb(0, 0, 0);
   flex-direction: column;
-  background-color: rgb(35 36 51);
+  background-color: rgb(255, 255, 255);
 }
 
 .down h1 {
